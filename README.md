@@ -108,46 +108,6 @@ $ get checkout -b {New Branch Name}
 ```
 - If you remove a Branch, remove the remote Branch information that is being tracked locally.
 ```
-# If a remote branch is being tracked and is deleted from the server, the remote Branch information will also be deleted locally.
-$ git fetch -p
-```
-***
-- Git pull Collision Technique
-When using git and pull, a collision occurs as shown below.
-```
-[oops]$ git pull
 
-remote: Counting objects: 99, do.
-
-remote: Compression objects: 100% (68/68), do.
-
-remote: Total 69 (delta 51), reused 0 (delta 0)
-
-Unpacking objects: 100% (69/69), none.
-
-From 10.25.1.20:/work/git/oops
-
-dab9a8b...b49cd63 master
-
-Updating da9a8b..b49cd63
-
-Your local changes to the following files would be overwritten by Merge:
-
-Makefile
-
-Please, commit your changes or stash them before you can Merge.
-
-Aborting
-```
-In this case, terminate the IDE in progress and use the following command.
-```
-1. git add -A
-1.git stock / git stock
-2. Git pull
-```
-Then the remaining part of the work will disappear and you will be able to git pull normally.
-[Stash Related]: (http://wit.nts-corp.com/2014/03/25/1153)
-
-***
 ## coding convention
 - The development tool uses AndroidStudio 3.0.
